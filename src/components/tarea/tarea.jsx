@@ -16,7 +16,7 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
                 onClick={()=>{eliminarTarea(id)}}/>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Tarea;

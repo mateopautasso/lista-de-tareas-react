@@ -9,7 +9,7 @@ function App() {
       let clave = localStorage.key(i);
       let valor = JSON.parse(localStorage.getItem(clave));
       tareasEnLocalStorage.push(valor);
-  }
+  };
   return (
     <div className="App">
       <div className='lista__container'>

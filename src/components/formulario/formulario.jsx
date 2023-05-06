@@ -4,12 +4,12 @@ import { v4 as uuidv4 } from 'uuid';
 
 function TareaForm(props) {
 
-    const [nombreTarea, setNombreTarea] = useState('')
+    const [nombreTarea, setNombreTarea] = useState('');
 
 
     const manejarCambio = e => {
-        setNombreTarea(e.target.value)
-    }
+        setNombreTarea(e.target.value);
+    };
 
     const manejarEnvio = e => {
         e.preventDefault();
@@ -23,8 +23,8 @@ function TareaForm(props) {
         }
         else {
             alert('Por favor ingrese un nombre para su nueva tarea')
-        }
-    }
+        };
+    };
 
     return(
         <form 
@@ -40,7 +40,7 @@ function TareaForm(props) {
 
             <button className='tarea__btn'>Agregar Tarea</button>
         </form>
-    )   
-}
+    );
+};
 
 export default TareaForm;

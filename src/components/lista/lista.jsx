@@ -13,7 +13,7 @@ function ListaTareas({ inStorage }) {
         localStorage.setItem(nuevaTarea.id, JSON.stringify(nuevaTarea));
         const tareasActualizadas = [nuevaTarea, ...tareas];
         setTareas(tareasActualizadas);
-    }
+    };
 
     const eliminarTarea = id => {
         const tareaEliminada = tareas.filter( tarea => {return tarea.id === id })
@@ -22,18 +22,18 @@ function ListaTareas({ inStorage }) {
 
         const tareasActualizadas = tareas.filter( tarea => tarea.id !== id )
         setTareas(tareasActualizadas)
-    }
+    };
     
     const completarTarea = id => {
         const tareasActualizadas = tareas.map(tarea => {
             if(tarea.id === id ) {
                 tarea.completada = !tarea.completada;
-                localStorage.setItem(tarea.id, JSON.stringify(tarea))
+                localStorage.setItem(tarea.id, JSON.stringify(tarea));
             }
-            return tarea
+            return tarea;
         })
         setTareas(tareasActualizadas);
-    }
+    };
 
     return(
         <>
